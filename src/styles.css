@@ -1,0 +1,117 @@
+:root {
+  --bg-dark: #1e293b; /* Azul oscuro elegante */
+  --bg-card: #334155; /* Un tono más claro para el área de tareas */
+  --text-main: #f8fafc;
+  --accent-blue: #38bdf8; /* Azul brillante para el botón de añadir */
+  --danger-red: #ef4444; /* Rojo para el botón de borrar */
+  --success-green: #4ade80; /* Verde para cuando marcas una tarea */
+}
+
+body {
+  background-color: var(--bg-dark);
+  color: var(--text-main);
+  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+}
+
+#root {
+  width: 100%;
+  max-width: 500px;
+}
+
+/* Formulario */
+.new-item-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  background: var(--bg-card);
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+}
+
+.form-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+input[type="text"] {
+  background: #1e293b;
+  border: 1px solid #475569;
+  color: white;
+  padding: 0.6rem;
+  border-radius: 4px;
+  outline: none;
+}
+
+input[type="text"]:focus {
+  border-color: var(--accent-blue);
+}
+
+/* Botones */
+.btn {
+  cursor: pointer;
+  background: var(--accent-blue);
+  color: #0f172a;
+  border: none;
+  padding: 0.6rem 1rem;
+  border-radius: 4px;
+  font-weight: bold;
+  transition: opacity 0.2s;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+.btn-danger {
+  background: transparent;
+  border: 1px solid var(--danger-red);
+  color: var(--danger-red);
+  padding: 0.25rem 0.5rem;
+  font-size: 0.8rem;
+}
+
+.btn-danger:hover {
+  background: var(--danger-red);
+  color: white;
+}
+
+/* Lista de tareas */
+.header {
+  margin-top: 2rem;
+  font-size: 1.5rem;
+  border-bottom: 1px solid #475569;
+  padding-bottom: 0.5rem;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+}
+
+.list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #334155;
+}
+
+.list li label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+}
+
+/* Checkbox personalizado */
+input[type="checkbox"] {
+  accent-color: var(--success-green);
+  width: 1.2rem;
+  height: 1.2rem;
+}
